@@ -471,6 +471,7 @@ export class PdfViewerComponent
       .subscribe(({ pageNumber }) => {
         if (pageNumber !== this._page) {
           this.page = pageNumber;
+          this.pageChange.emit(pageNumber);
         }
       });
 
