@@ -469,9 +469,10 @@ export class PdfViewerComponent
     fromEvent(eventBus, 'pagechanging')
       .pipe(takeUntil(this.destroy$))
       .subscribe(({ pageNumber }) => {
+        this.pageChange.emit(pageNumber);
         if (pageNumber !== this._page) {
           this.page = pageNumber;
-          this.pageChange.emit(pageNumber);
+      
         }
       });
 

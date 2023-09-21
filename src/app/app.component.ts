@@ -138,7 +138,9 @@ export class AppComponent implements OnInit {
       }
     }
   }
-
+  pageChange(){
+    console.log("change page")
+  }
   setPassword(password: string) {
     let newSrc;
 
